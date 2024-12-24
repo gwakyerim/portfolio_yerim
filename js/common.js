@@ -118,7 +118,7 @@ const viewItems = [
         procedureBtn : "작업과정",
         siteBtn : "사이트",
         procedureRoot : "https://www.figma.com/design/fLBOe3lShgMWHkPcPIfkHp/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0-1&t=Cnorv74536vMusA4-1",
-        siteRoot : "https://gwakyerim.github.io/renewal_amuse/",
+        siteRoot : "https://gwakyerim.github.io/portfolio_yerim",
     },
     {
         title : "삼익가구",
