@@ -184,6 +184,7 @@ header .container nav ul .menu-list a {
   transform: translate(-50%, -50%);
   width: 33.3%;
   aspect-ratio: 1;
+  min-width: 460px;
   max-width: 580px;
   border: 2px solid #131313;
   border-radius: 50%;
@@ -668,6 +669,131 @@ footer .container {
   transform: translateY(0);
 }
 
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .container {
+    padding: 0 16px !important;
+  }
+  section {
+    padding: 80px 0;
+  }
+  header .container nav {
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--white);
+    z-index: 1000;
+    transition: 0.5s;
+  }
+  header .container nav.active {
+    right: 0;
+  }
+  header .container nav ul {
+    display: block;
+    margin-top: 80px;
+  }
+  header .container nav ul .menu-list {
+    padding: 16px 16px;
+  }
+  header .container nav ul .menu-list:hover {
+    transform: none;
+  }
+  header .container nav ul .menu-list a {
+    padding: 32px 0;
+  }
+  header .container .mobile-nav {
+    display: block;
+    z-index: 2000;
+    position: relative;
+  }
+  .home .scroll-down {
+    font-size: 14px;
+  }
+  .home .scroll-down span {
+    display: block;
+    width: 21px;
+    height: 35px;
+  }
+  .home .scroll-down span:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--white);
+    left: 43%;
+    top: 20%;
+    animation: scroll 2s infinite;
+  }
+  .about-me .content-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about-me .content-inner .left {
+    width: 50%;
+  }
+  .about-me .content-inner .left div .modal .modal-overlay .resume-img {
+    width: calc(100% - 32px);
+  }
+  .about-me .content-inner .right {
+    width: 100%;
+    padding-left: 0;
+  }
+  .skills li {
+    margin-bottom: 48px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .skills li:last-child div {
+    gap: 16px;
+  }
+  .portfolio .content-site .tab li button {
+    font-size: 16px;
+  }
+  .portfolio .content-site .view .list-item {
+    gap: 16px;
+  }
+  .portfolio .content-design .modal .modal-content {
+    padding: 0 16px;
+  }
+  .portfolio .content-design .design-view {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 200px;
+    height: auto;
+    gap: 20px;
+  }
+  .portfolio .content-design .design-view li {
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .contact .container .contact-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact .container .contact-inner .img-wrap {
+    width: 50%;
+  }
+  .contact .container .contact-inner .text-wrap {
+    width: 100%;
+    text-align: center;
+  }
+  .contact .container .contact-inner .text-wrap p {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  .contact .container .contact-inner .text-wrap div {
+    font-size: 20px;
+    padding-bottom: 16px;
+  }
+  .contact .container .contact-inner .text-wrap div a {
+    padding-left: 16px;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 16px !important;
@@ -783,7 +909,7 @@ footer .container {
   .portfolio .content-site .tab li {
     position: relative;
     padding: 8px 0;
-    border: 1px solid var(--light-gray);
+    border: transparent;
     border-radius: 10px;
   }
   .portfolio .content-site .tab li:before {
