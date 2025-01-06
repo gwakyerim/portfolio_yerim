@@ -43,47 +43,6 @@ window.addEventListener('scroll', function() {
     }
 })
 
-const modal = document.querySelector('.modal');
-const openBtn = document.querySelector('.modal-open');
-const closeBtn = document.querySelector('.modal-close');
-const modalOverlay =document.querySelector('.modal-overlay');
-
-//1.modal-open 버튼을 클릭한다.
-//2. modal 에 active를 추가한다.
-openBtn.addEventListener('click', function() {
-    modal.classList.add('active');
-})
-//3.modal-colse 버튼을 클릭한다.
-//4. modal 에 display를 감춘다.
-closeBtn.addEventListener('click', function() {
-    modal.classList.remove('active');
-})
-//5. modal-overlay 창을 클릭한다.
-//6. modal 에 display를 감춘다.
-modalOverlay.addEventListener('click', function() {
-    modal.classList.remove('active');
-})
-
-const designList = document.querySelectorAll('.design-list');
-// 디자인 배너 리스트중 하나를 선택하면 
-// 거기 안에있는 이미지가 모달에 있는 컨텐츠 이미지로 들어가야 함.
-
-// 1. 배너 리스트 하나하나 마다를 클릭한다 (addEventListener) (click event)
-designList.forEach(function(banner){
-    banner.addEventListener('click', function() {
-        const bannerImg = this.querySelector('img');
-        // 2. 디자인 배너 안에 있는 이미지 태그 src 주소를 저장해서
-        const modalImg = document.querySelector('.content-design .modal-content img');
-        // 3. 모달안에 컨텐츠 안에 이미지 태그의 src 주소에 할당한다.
-        modalImg.src = bannerImg.src;
-
-        document.querySelector('.content-design .modal').classList.add('on');
-    })
-})
-document.querySelector('.content-design .modal').addEventListener('click', function() {
-    this.classList.remove('on');
-})
-
 const siteNames = ['어뮤즈', '포트폴리오', '삼익가구', '동원제일저축은행', '영원무역', '오늘의집', '마켓컬리', '크롬'];
 const ul = document.getElementById('tabContainer');
 siteNames.forEach(function(siteName, index) {
@@ -216,7 +175,7 @@ viewItems.forEach(function(viewItem, index) {
                                 </ul>
                                 <div class="btn-wrap">
                                     <a class="view-btn" target="_blank" href=${viewItem.procedureRoot}>${viewItem.procedureBtn}</a>
-                                    <a class="view-btn" href=${viewItem.siteRoot} target="_blank">${viewItem.siteBtn}</a>
+                                    <a class="view-btn" target="_blank" href=${viewItem.siteRoot}>${viewItem.siteBtn}</a>
                                 </div>
                             </div>
                             <div class="img-prev">
@@ -273,3 +232,44 @@ tabList.forEach(function(tab_btn, index){
         siteList[index].classList.add('active');
     });
 });
+
+const modal = document.querySelector('.modal');
+// const openBtn = document.querySelector('.modal-open');
+const closeBtn = document.querySelector('.modal-close');
+const modalOverlay =document.querySelector('.modal-overlay');
+
+// //1.modal-open 버튼을 클릭한다.
+// //2. modal 에 active를 추가한다.
+// openBtn.addEventListener('click', function() {
+//     modal.classList.add('active');
+// })
+//3.modal-colse 버튼을 클릭한다.
+//4. modal 에 display를 감춘다.
+closeBtn.addEventListener('click', function() {
+    modal.classList.remove('active');
+})
+//5. modal-overlay 창을 클릭한다.
+//6. modal 에 display를 감춘다.
+modalOverlay.addEventListener('click', function() {
+    modal.classList.remove('active');
+})
+
+const designList = document.querySelectorAll('.design-list');
+// 디자인 배너 리스트중 하나를 선택하면 
+// 거기 안에있는 이미지가 모달에 있는 컨텐츠 이미지로 들어가야 함.
+
+// 1. 배너 리스트 하나하나 마다를 클릭한다 (addEventListener) (click event)
+designList.forEach(function(banner){
+    banner.addEventListener('click', function() {
+        const bannerImg = this.querySelector('img');
+        // 2. 디자인 배너 안에 있는 이미지 태그 src 주소를 저장해서
+        const modalImg = document.querySelector('.content-design .modal-content img');
+        // 3. 모달안에 컨텐츠 안에 이미지 태그의 src 주소에 할당한다.
+        modalImg.src = bannerImg.src;
+
+        document.querySelector('.content-design .modal').classList.add('on');
+    })
+})
+document.querySelector('.content-design .modal').addEventListener('click', function() {
+    this.classList.remove('on');
+})
