@@ -25,6 +25,7 @@ for (var i = 0; i < menuList.length; i++) {
     }
 }
 
+
 // 1.윈도우 창 스크롤을 내린다.
 const preScrollTop = 100;
 window.addEventListener('scroll', function() {
@@ -43,6 +44,45 @@ window.addEventListener('scroll', function() {
     }
 })
 
+
+// Home부분 타자효과 만들기
+const target = document.querySelector('#dynamic');
+
+function blink() {
+    target.classList.toggle('on');//dynamic에 active 클래스를 추가-삭제 반복한다.
+}
+setInterval(blink, 500) // blink 함수를 0.5초마다 실행 
+
+const string = "코딩과 함께 여행중인 퍼블리셔 예림 입니다."; // 텍스트를 string 변수에 담아준다.
+const split = string.split(""); //string내에 텍스트를 여러개의 문자열로 나눈다.
+
+function dynamic(arr) {
+    if(arr.length > 0){ //배열의 길이가 0보다 크다면
+        target.textContent = target.textContent + arr.shift(); //dynamic textContent에 배열요소를 추가한다.
+        setTimeout(function(){
+            dynamic(arr)}, 80) //0.08초 후에 dynamic 함수 실행
+    }
+}
+dynamic(split); 
+
+function reset() {
+    target.textContent = ""; //textContent의 내용을 없애준다.
+    const resplit = string.split(""); //string의 텍스트를 여러 문자열로 나누고 resplit 변수에 할당한다.
+    dynamic(resplit); //dynamic함수에 resplit 인자를 넣어 실행한다.
+}
+
+function dynamic(arr){
+    if(arr.length > 0){
+        target.textContent = target.textContent + arr.shift();
+        setTimeout(function(){
+            dynamic(arr)}, 80)
+    } else {
+        setTimeout(reset, 3000);
+    }
+}
+
+
+//포트폴리오 배열로 담아 화면에 띄우기
 const siteNames = ['어뮤즈', '포트폴리오', '삼익가구', '동원제일저축은행', '영원무역', '오늘의집', '마켓컬리', '크롬'];
 const ul = document.getElementById('tabContainer');
 siteNames.forEach(function(siteName, index) {
