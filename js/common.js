@@ -81,6 +81,19 @@ function dynamic(arr){
     }
 }
 
+//Skills 영역 스크롤 이벤트
+const skillSDesc = document.querySelectorAll('.skill-desc');
+function scrollEvent() {
+    skillSDesc.forEach(function(skillDesc) {
+        const position = skillDesc.getBoundingClientRect();
+
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            skillDesc.classList.add('active');
+        }
+    })
+}
+window.addEventListener("scroll", scrollEvent);
+
 
 //포트폴리오 배열로 담아 화면에 띄우기
 const siteNames = ['어뮤즈', '포트폴리오', '삼익가구', '동원제일저축은행', '영원무역', '오늘의집', '마켓컬리', '크롬'];
