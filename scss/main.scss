@@ -1,22 +1,22 @@
 /* Google Web Font */
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans+KR:wght@100..900&display=swap');
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
-
 /* FontAwesome CDN 4.7 */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
 // variables
 :root {
-    --dark-gray: #131313;
-    --green: rgb(30, 49, 35);
+    --dark-gray: #252525;
+    --green: #0d5d6d;
     --light-gray: #A09999;
+    --beige: #fff9e8;
     --white: #fff;
+    --yellow: #fff0c6;
 }
 
 // common style
@@ -31,17 +31,18 @@ body {
     cursor: url('../img/cursor.png'), auto;
 }
 .container {
-    width: 100%;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     max-width: 1200px;
 }
 .title {
     font-size: 54px;
-    font-family: "Alegreya Sans SC", sans-serif;
-    font-weight: 800;
+    font-family: 'Abril Fatface';
+    font-style: normal;
+    font-weight: 400;
     margin-bottom: 80px;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.47);
+    color: var(--green);
 }
 .content-inner {
     border: 1px solid var(--light-gray);
@@ -95,26 +96,24 @@ section {
     height: 80px;
     position: fixed;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.37);
+    background-color: transparent;
     &.active {
         background-color: var(--white);
-        border-bottom: 1px solid var(--light-gray);
     }
     .container {
         position: relative;
-        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0;
         h1 {
-            height: 100%;
+            width: 44px;
+            height: 44px;
             a {
                 display: block;
-                height: 100%;
+                width: 100%;
             }
             img {
-                height: 100%;
+                width: 100%;
             }
         }
 
@@ -132,17 +131,17 @@ section {
                     transition: 0.5s;
                     font-weight: 500;
                     &.active {
-                        transform: scale(1.2);
+                        transform: translateY(-5px);
                     }
                     &:hover {
-                        transform: scale(1.2);
+                        transform: translateY(-5px);
                     }
                     a {
                         height: 50px;
                         display: flex;
                         align-items: center;
                         padding: 0 20px;
-                        color: #1E3123;
+                        color: var(--dark-gray);
                     }
                 }
             }
@@ -154,89 +153,39 @@ section {
 #home {
     position: relative;
     height: 100vh;
-    background: url('../img/home.jpg') no-repeat;
-    background-size: 100% 100%;
-    .circle {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        width: 33.3%;
-        aspect-ratio: 1;
-        min-width: 460px;
-        max-width: 580px;
-        border: 2px solid var(--dark-gray);
-        border-radius: 50%;
-        .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            text-align: center;
-            width: 100%;
-            h1 {
-                font-family: "Alegreya Sans SC", sans-serif;
-                font-size: 54px;
-                text-shadow: 0 0 10px var(--green);
-                font-weight: 800;
-                padding-bottom: 20px;
-            }
-            #dynamic {
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    right: -10px;
-                    width: 3px;
-                    height: 100%;
-                    background-color: var(--dark-gray);
-                }
-                &.on:after {
-                    display: none;
-                }
-                font-size: 24px;
-                position: relative;
-                display: inline-block;
-                font-weight: 600;
-            }
-            span {
+    background-color: var(--beige);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        div {
+            font-size: 100px;
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: var(--green);
+        }
+        #dynamic {
+            &:after {
+                content: '';
                 display: block;
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 50%;
-                height: 4px;
-                background-color: transparent;
-                transform-origin:left;
-                animation: logoring 4.5s linear infinite;
-                &:before {
-                    content: '';
-                    width: 32px;
-                    height: 32px;
-                    background-color: rgba(9, 9, 9, 0.57);
-                    box-shadow: 0 0 10px var(--green);
-                    position: absolute;
-                    border-radius: 50%;
-                    top: calc(50% - 16px);
-                    left: calc(100% - 16px);
-                }
+                top: 0;
+                right: -10px;
+                width: 2px;
+                height: 100%;
+                background-color: var(--dark-gray);
             }
-        }
-        &:before {
-            content: '';
-            position: absolute;
-            z-index: 10;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: translateX(-3px);
-            border: 3px solid transparent;
-            border-top: 3px solid rgba(9, 9, 9, 0.57);
-            border-right: 3px solid rgba(9, 9, 9, 0.57);
-            border-radius: 50%;
-            animation: logoAni 4.5s linear infinite;
+            &.on:after {
+                display: none;
+            }
+            font-size: 24px;
+            position: relative;
+            display: inline-block;
         }
     }
     .scroll-down {
@@ -244,14 +193,14 @@ section {
         left: 50%;
         transform: translateX(-50%);
         bottom: 20px;
-        color: var(--white);
+        color: var(--light-gray);
         font-family: "Alegreya Sans SC", sans-serif;
         font-weight: 300;
         span {
             display: block;
             width: 30px;
             height: 50px;
-            border: 1px solid var(--white);
+            border: 1px solid var(--light-gray);
             border-radius: 20px;
             position: relative;
             margin: 10px auto;
@@ -261,7 +210,7 @@ section {
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
-                background-color: var(--white);
+                background-color: var(--light-gray);
                 left: 43%;
                 top: 20%;
                 animation: scroll 2s infinite;
@@ -273,7 +222,8 @@ section {
 /* #### About-me 영역 #### */
 #about-me {
     position: relative;
-    .content-inner.about {
+    background-color: var(--beige);
+    .content-inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -281,7 +231,7 @@ section {
         border: none;
         opacity: 0;
         transform: translateY(-100px);
-        transition: 0.8s;
+        transition: 1s;
         &.active {
             opacity: 1;
             transform: translateY(0);
@@ -289,7 +239,7 @@ section {
         .left {
             border: 1px solid var(--light-gray);
             border-radius: 20px;
-            width: 36.2%;
+            width: 35%;
             padding: 20px;
             div {
                 display: flex;
@@ -307,47 +257,70 @@ section {
                     margin: 0 auto;
                     .resume-open {
                         cursor: pointer;
-                        background-color: var(--white);
-                        border-radius: 10px;
-                        display: inline-block;
-                        color: var(--green);
-                        padding: 10px 20px;
-                        border: 1px solid var(--green);
+                        display: inline-flex;
+                        border-radius: 100px;
+                        color: var(--dark-gray);
                         position: relative;
+                        height: 40px;
+                        padding: 0 16px;
+                        line-height: 40px;
                         &:before {
-                            content: '';
-                            position: absolute;
+                            content: "";
                             display: block;
-                            width: 0;
-                            height: 100%;
-                            background-color: var(--green);
-                            top: 0;
                             left: 0;
-                            border-radius: 10px;
-                            transition: 0.8s;
-                            z-index: -1;
-                        }
-                        &:hover {
-                            color: var(--white);
-                            z-index: 1000;
+                            top: 0;
+                            width: 40px;
+                            height: 100%;
+                            background-color: var(--yellow);
+                            position: absolute;
+                            border-radius: 100px;
+                            z-index: 1;
+                            transition: all 400ms ease;
                         }
                         &:hover:before {
                             width: 100%;
+                        }
+                        span {
+                            z-index: 100;
                         }
                     }
                 }
             }
         }
         .right {
-            width: 64.8%;
+            width: 65%;
             padding-left: 40px;
-            display: flex;
-            align-items: center;
-            white-space: pre-line;
             .intro {
-                b {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                p:first-child {
                     font-size: 28px;
                     color: var(--green);
+                    font-weight: 600;
+                    span {
+                        position: relative;
+	                    animation: ani_text 2s infinite linear;
+                        margin-right: -3px;
+                        &:nth-child(1) {
+                            animation-delay: 0.1s;
+                        }
+                        &:nth-child(2) {
+                            animation-delay: 0.2s;
+                        }
+                        &:nth-child(3) {
+                            animation-delay: 0.3s;
+                        }
+                        &:nth-child(4) {
+                            animation-delay: 0.4s;
+                        }
+                        &:nth-child(5) {
+                            animation-delay: 0.5s;
+                        }
+                        &:nth-child(6) {
+                            animation-delay: 0.6s;
+                        }
+                    }
                 }
             }
         }
@@ -356,11 +329,8 @@ section {
 
 /* #### Skills 영역 #### */
 #skills {
+    background-color: var(--yellow);
     .skill-desc {
-        &.active {
-            transform: translateX(0);
-            opacity: 1;
-        }
         transition: 0.5s;
         margin-bottom: 20px;
         display: flex;
@@ -368,6 +338,11 @@ section {
         gap: 20px;
         transform: translateY(-50px);
         opacity: 0;
+        background-color: transparent;
+        &.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
         &:last-child {
             margin-bottom: 0;
             div {
@@ -388,6 +363,7 @@ section {
 }
 /* #### Portfolio 영역 #### */
 #portfolio {
+    background-color: var(--beige);
     .content-site {
         .tab {
             text-align: center;
@@ -395,6 +371,9 @@ section {
             display: flex;
             justify-content: center;
             li {
+                position: relative;
+                padding: 0 10px;
+                z-index: 100;
                 &:before {
                     content: '';
                     position: absolute;
@@ -403,9 +382,10 @@ section {
                     transform: translateY(-50%);
                     width: 0;
                     height: 50%;
-                    background-color: rgba(65, 102, 85, 0.322);
+                    background-color: var(--yellow);
                     transition: 0.5s;
                     border-radius: 10px;
+                    z-index: -1;
                 }
                 &.active:before {
                     width: 82%;
@@ -423,8 +403,6 @@ section {
                 &:last-child:after {
                     display: none;
                 }
-                position: relative;
-                padding: 0 10px;
                 button {
                     border: none;
                     background-color: transparent;
@@ -451,41 +429,71 @@ section {
                 &:nth-child(1) {
                     .img-prev {
                         background-image: url('../img/portfolio-site-01.png');
+                        background-position: 0 0;
+                        transition: 3s;
+                        &:hover {
+                            background-position: 0 100%;
+                        }
                     }
                 }
                 &:nth-child(2) {
                     .img-prev {
                         background-image: url('../img/portfolio-site-02.png');
+                        background-position: 0 0;
+                        transition: 6s;
+                        &:hover {
+                            background-position: 0 100%;
+                        }
                     }
                 }
                 &:nth-child(3) {
                     .img-prev {
                         background-image: url('../img/portfolio-site-03.png');
+                        background-position: 0 0;
+                        transition: 3s;
+                        &:hover {
+                            background-position: 0 100%;
+                        }
                     }
                 }
                 &:nth-child(4) {
                     .img-prev {
                         background-image: url('../img/portfolio-site-04.png');
+                        background-position: 0 0;
+                        transition: 3s;
+                        &:hover {
+                            background-position: 0 100%;
+                        }
                     }
                 }
                 &:nth-child(5) {
                     .img-prev {
                         background-image: url('../img/portfolio-site-05.png');
+                        background-position: 0 0;
+                        transition: 7s;
+                        &:hover {
+                            background-position: 0 100%;
+                        }
                     }
                 }
                 &:nth-child(6) {
                     .img-prev {
                         background-image: url('../img/portfolio-site-06.png');
+                        background-position: 0 0;
+                        transition: 5s;
+                        &:hover {
+                            background-position: 0 100%;
+                        }
                     }
                 }
                 &:nth-child(7) {
                     .img-prev {
                         background-image: url('../img/portfolio-site-07.png');
-                    }
-                }
-                &:nth-child(8) {
-                    .img-prev {
-                        background-image: url('../img/portfolio-site-08.png');
+                        background-position: 0 0;
+                        transition: 5s;
+                        &:hover {
+                            background-position: 0 100%;
+                        }
                     }
                 }
                 &.active {
@@ -511,9 +519,18 @@ section {
                     }
                     ul li {
                         margin-bottom: 4px;
+                        span {
+                            display: inline-block;
+                            min-width: 100px;
+                            font-weight: 600;
+                        }
                     }
                     .btn-wrap {
-                        margin-top: 20px;
+                        margin-top: 40px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 16px;
                         .view-btn {
                             border: 1px solid var(--light-gray);
                             color: var(--dark-gray);
@@ -521,8 +538,7 @@ section {
                             padding: 8px 0;
                             text-align: center;
                             display: inline-block;
-                            margin-right: 20px;
-                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.589);
+                            box-shadow: 0 0 5px var(--yellow);
                         }
                     }
                 }
@@ -554,12 +570,13 @@ section {
             .modal-close {
                 padding: 10px 20px;
                 border-radius: 10px;
-                background-color: var(--white);
-                color: var(--green);
+                background-color: var(--green);
+                color: var(--white);
                 position: absolute;
                 right: 20px;
                 top: 10px;
                 cursor: pointer;
+                border: none;
             }
             .modal-content {
                 max-width: 600px;
@@ -575,28 +592,26 @@ section {
         .design-view {
             display: grid;
             grid-template-columns: repeat(4 , 1fr);
-            grid-template-rows: 400px;
-            height: auto;
             gap: 20px;
-            li {
+            .design-list {
                 border: 1px solid var(--light-gray);
                 border-radius: 20px;
                 overflow: hidden;
-                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                aspect-ratio: 1 / 1.5;
                 img {
-                    display: inline-block;
-                    position: absolute;
-                    left: 50%;
-                    top: 0;
-                    transform: translateX(-50%);
-                    height: 100%;
+                    width: 100%;
                 }
             }
         }
     }
 }
+
 /* #### Contact 영역 #### */
 #contact {
+    background-color: var(--yellow);
     .container .contact-inner {
         width: 100%;
         display: flex;
@@ -605,6 +620,7 @@ section {
         gap: 40px;
        .img-wrap {
             width: 30%;
+            max-width: 330px;
             img {
                 width: 100%;
                 object-fit: cover;
@@ -623,7 +639,6 @@ section {
             p {
                 font-size: 36px;
                 white-space: pre-line;
-                color: var(--green);
                 font-weight: 600;
                 margin-bottom: 40px;
             }
@@ -680,50 +695,60 @@ footer {
 }
 
 
-/* 태블릿 분기점 */
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+/* ####### 태블릿 분기점 #######*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
         padding: 0 16px !important;
     }
     section {
         padding: 80px 0;
     }
+    .title {
+        font-size: 48px;
+    }
     /* #### Header 영역 ####*/
-    #header .container {
-        nav {
-            position: fixed;
-            top: 0;
-            right: -60%;
-            width: 60%;
-            height: 100vh;
-            background-color: var(--white);
-            z-index: 1000;
-            transition: 0.5s;
-            &.active {
-                right: 0;  
+    #header {
+        height: 62px;
+        .container {
+            h1 {
+                width: 40px;
+                height: 40px;
             }
-            ul {
-                display: block;
-                margin-top: 80px;
-                .menu-list {
-                    padding: 16px 16px;
-                    &:hover {
-                        transform: none;
-                    }
-                    a {
-                        padding: 32px 0;
+            nav {
+                position: fixed;
+                top: 0;
+                right: -60%;
+                width: 60%;
+                height: 100vh;
+                background-color: var(--white);
+                z-index: 1000;
+                transition: 0.5s;
+                &.active {
+                    right: 0;  
+                }
+                ul {
+                    display: block;
+                    margin-top: 80px;
+                    .menu-list {
+                        padding: 16px 16px;
+                        &:hover {
+                            transform: none;
+                        }
+                        a {
+                            padding: 32px 0;
+                        }
                     }
                 }
             }
-        }
-
-        .mobile-nav {
-            display: block;
-            z-index: 2000;
-            position: relative;
+    
+            .mobile-nav {
+                display: block;
+                z-index: 2000;
+                position: relative;
+            }
         }
     }
-    /* #### Home 영역 ####*/
+    /* #### Home 영역 #### */
     #home {
         .scroll-down {
             font-size: 14px;
@@ -748,13 +773,9 @@ footer {
     /* #### About-me 영역 #### */
     #about-me {
         .content-inner {
-            flex-direction: column;
-            gap: 0;
+            gap: 20px;
             .left {
                 width: 50%;
-                div .modal .modal-overlay .resume-img {
-                    width: calc(100% - 32px);
-                }
             }
             .right {
                 width: 100%;
@@ -766,8 +787,6 @@ footer {
     #skills {
         li {
             margin-bottom: 48px;
-            flex-direction: column;
-            text-align: center;
             gap: 16px;
             &:last-child div {
                 gap: 16px;
@@ -789,15 +808,12 @@ footer {
                 padding: 0 16px;
             }
             .design-view {
-                display: grid;
-                grid-template-columns: repeat(2 , 1fr);
-                grid-template-rows: 200px 200px;
-                height: auto;
-                gap: 20px;
-                li {
+                grid-template-columns: repeat(3 , 1fr);
+                .design-list {
                     border: 1px solid var(--light-gray);
                     border-radius: 20px;
                     overflow: hidden;
+                    aspect-ratio: 1 / 1.5;
                 }
             }
         }
@@ -830,14 +846,15 @@ footer {
     }
 }
 
-/* 모바일 분기점 */
-@media screen and (max-width: 768px) {
+
+/* ###### 모바일 분기점 ###### */
+@media screen and (max-width: 767px) {
     .container {
         padding: 0 16px !important;
     }
     .title {
-        font-size: 48px;
-        text-align: center;
+        font-size: 40px;
+        text-align: left;
         margin-bottom: 32px;
     }
     section {
@@ -845,9 +862,12 @@ footer {
     }
     /* #### Header 영역 ####*/
     #header {
-        height: 56px;
+        height: 62px;
         .container {
-            height: 100%;
+            h1 {
+                width: 40px;
+                height: 40px;
+            }
             nav {
                 position: fixed;
                 top: 0;
@@ -884,22 +904,16 @@ footer {
     }
     /* #### Home 영역 ####*/
     #home {
-        .circle {
-            width: 50%;
-            min-width: 320px;
-            .text {
-                h1 {
-                    font-size: 32px;
-                    padding-bottom: 16x;
-                }
-                #dynamic {
-                    font-size: 16px;
-                }
-                span:before {
-                    width: 20px;
-                    height: 20px;
-                    top: calc(50% - 10px);
-                    left: calc(100% - 10px);
+        .home-title {
+            padding: 0 16px;
+            text-align: center;
+            div {
+                font-size: 64px;
+            }
+            #dynamic {
+                font-size: 16px;
+                &:after {
+                    display: none;
                 }
             }
         }
@@ -915,7 +929,7 @@ footer {
                     width: 3px;
                     height: 3px;
                     border-radius: 50%;
-                    background-color: var(--white);
+                    background-color: var(--light-gray);
                     left: 43%;
                     top: 20%;
                     animation: scroll 2s infinite;
@@ -924,12 +938,14 @@ footer {
         }
     }
     /* #### About-me 영역 ####*/
-    .about-me {
+    #about-me {
         .content-inner {
+            display: flex;
             flex-direction: column;
-            gap: 0;
+            gap: 40px;
             .left {
-                width: 60%;
+                width: 70%;
+                max-width: 270px;
                 div .modal .modal-overlay .resume-img {
                     width: calc(100% - 32px);
                 }
@@ -937,15 +953,19 @@ footer {
             .right {
                 width: 100%;
                 padding-left: 0;
+                .intro {
+                    p:first-child {
+                        font-size: 24px;
+                    }
+                }
             }
         }
     }
     /* #### Skills 영역 #### */
     #skills {
-        li {
+        .skill-desc {
             margin-bottom: 48px;
             flex-direction: column;
-            text-align: center;
             gap: 16px;
             &:last-child div {
                 gap: 16px;
@@ -959,22 +979,11 @@ footer {
                 text-align: center;
                 margin-bottom: 40px;
                 display: grid;
-                grid-template-columns: repeat(2 , 1fr);
-                column-gap: 32px;
-                row-gap: 16px;
+                grid-template-columns: repeat(3 , 1fr);
                 justify-content: center;
                 li {
-                    &:before {
-                        height: 100%;
-                        left: 0;
-                        transition: 0.8s;
-                    }
-                    &.active:before {
-                        width: 100%;
-                    }
                     position: relative;
                     padding: 8px 0;
-                    border: transparent;
                     border-radius: 10px;
                     button {
                         border: none;
@@ -989,17 +998,22 @@ footer {
             .view {
                 .list-item {
                     flex-direction: column;
-                    row-gap: 32px;
+                    gap: 32px;
                     text-align: center;
                     .desc {
                         width: 100%;
-                    }
-                    .btn-wrap .view-btn:last-child {
-                        margin-right: 0;
+                        ul li span {
+                            display: block;
+                        }
+                        .btn-wrap {
+                            justify-content: center;
+                            .view-btn {
+                                width: 80px;
+                            }
+                        }
                     }
                     .img-prev {
-                        width: 100%;
-                        aspect-ratio: 3 / 2;
+                        width: 50%;
                     }
                 }
             }
@@ -1010,14 +1024,14 @@ footer {
             }
             .design-view {
                 display: grid;
+                justify-content: center;
                 grid-template-columns: repeat(2 , 1fr);
-                grid-template-rows: 200px 200px;
-                height: auto;
-                gap: 20px;
-                li {
+                gap: 16px;
+                .design-list {
                     border: 1px solid var(--light-gray);
                     border-radius: 20px;
                     overflow: hidden;
+                    aspect-ratio: 1 / 1.5;
                 }
             }
         }
@@ -1059,6 +1073,7 @@ footer {
     transform: rotate(360deg);
     }
 }
+
 @keyframes logoring {
     0% {
     transform:rotate(48deg);
@@ -1067,6 +1082,7 @@ footer {
     transform:rotate(408deg);
     }
 }
+
 @keyframes scroll {
     0% {
         transform: translate(0 , 0);
@@ -1080,19 +1096,24 @@ footer {
         opacity: 0;
     }
 }
-@keyframes logoAni {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}
-@keyframes logoring {
-    0% {
-        transform:rotate(48deg);
-    }
-    100% {
-        transform:rotate(408deg);
-    }
+
+@keyframes ani_text { 
+    0% { 
+        top: 0; 
+    } 
+    20% { 
+        top: -0.2rem; 
+    } 
+    40% { 
+        top: 0 
+    } 
+    60% { 
+        top: 0 
+    } 
+    80% { 
+        top: 0 
+    } 
+    100% { 
+        top: 0 
+    } 
 }

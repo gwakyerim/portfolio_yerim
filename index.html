@@ -50,12 +50,9 @@
     <main>
         <!-- Section : Home 영역 -->
         <section id="home">
-            <div class="circle">
-                <div class="text">
-                    <h1>WEB PUBLISHER</h1>
-                    <div id="dynamic"></div>
-                    <span></span>
-                </div>
+            <div class="home-title">
+                <div>Why Not ?</div>
+                <p id="dynamic"></p>
             </div>
             <!-- 마우스 모양 스크롤 다운 -->
             <div class="scroll-down">Scroll Down<span></span></div>
@@ -71,25 +68,36 @@
                                 <img src="./img/aboutme-yerim.jpg" alt="예림 대표사진">
                             </div>
                             <div class="resume">
-                                <a class="resume-open" href="./img/resume-me.pdf" target="_blank">이력서 보기</a>
+                                <a class="resume-open" href="./img/resume-me.pdf" target="_blank">
+                                    <span>이력서 Click</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="right">
                         <div class="intro">
-                            <b>
-                                안녕하세요!
+                            <p>
+                                <span>안</span>
+                                <span>녕</span>
+                                <span>하</span>
+                                <span>세</span>
+                                <span>요</span>
+                                <span>!</span>
+                                <br>
                                 누구보다 소통과 협업에 진심인 신입 웹 퍼블리셔 곽예림입니다.
-                            </b>
+                            </p>
                             <p>
                                 하던 일을 전부 그만두고 새로운 시작에 첫걸음을 한다는 것. 코딩을 접하기 전까진 고민도 많았고 두려웠습니다. 
-                                하지만 코딩을 알아갈수록 두려움이 용기로 바뀔만큼 흥미롭고 매력 있는 일이라는 것을 깨닫게 되었습니다.
-
+                                <br>
+                                하지만 HTML, CSS, Javascript, jQuery 등 코드가 하나하나 적용되고 완성 되어가는 모습을 볼 때면 행복함이 저를 감싸는 만큼,
+                                이 일이 제 일이라고 확신하고 새로운 발돋움을 시작하게 되었습니다.
+                                <br><br>
                                 저는 "웹 표준"과 "웹 접근성"을 준수하여 사용자가 보기 쉽고 사용하기 편리하게 결과물을 잘 구현합니다. 
-                                또한 팀원들과의 소통을 중요시하며 코딩을 진심으로 재밌어하는 퍼블리셔입니다.
-
-                                현재 지원 업무는 퍼블리셔이지만, 추후 프론트엔드 개발자의 꿈이 있어 다양한 개발 스택(React,Vue.js)들을 
-                                쌓아갈 예정입니다.감사합니다!
+                                또한 누구보다 원활한 소통과 피드백을 유연하게 받아들일 수 있는 역량을 가지고 있습니다.
+                                <br><br>
+                                현재 지원 업무는 퍼블리셔이지만,추후 요구하는 역량이 있다면 언제든지 배울 준비도 되어있습니다.
+                                <br><br>
+                                시간내어 읽어주셔서 감사합니다.
                             </p>
                         </div>
                     </div>
@@ -156,14 +164,14 @@
         <section id="portfolio">
             <div class="container">
                 <h2 class="title">PORTFOLIO</h2>
-                <!-- 포트폴리오 컨텐츠 영역 , 자바스크립트로 넣음 -->
+                <!-- 포트폴리오 사이트 영역 메뉴  -->
                 <div class="content-site">
                     <ul class="tab" id="tabContainer">
-                        <!-- <li>
+                        <li>
                             <button>어뮤즈</button>
                         </li>
                         <li>
-                            <button>포트폴리오</button>
+                            <button>윤슬에게</button>
                         </li>
                         <li>
                             <button>삼익가구</button>
@@ -175,17 +183,15 @@
                             <button>영원무역</button>
                         </li>
                         <li>
-                            <button>오늘의집</button>
+                            <button>지그재그</button>
                         </li>
                         <li>
                             <button>마켓컬리</button>
                         </li>
-                        <li>
-                            <button>크롬</button>
-                        </li> -->
                     </ul>
+                    <!-- 포트폴리오 사이트 세부 영역  -->
                     <ul class="view" id="viewContainer">
-                        <!-- <li class="list-item active">
+                        <li class="list-item active">
                             <div class="desc">
                                 <h1>어뮤즈 (반응형 웹)</h1>
                                 <p>
@@ -212,7 +218,7 @@
                                 </ul>
                                 <div class="btn-wrap">
                                     <a class="view-btn" href="https://www.figma.com/design/N58wN2i5CbuhA4Y5la4Yxy/AMUSE%EB%A6%AC%EB%89%B4%EC%96%BC?node-id=10-3&t=jLLDHvlV18QS5blm-1" target="_blank">작업과정</a>
-                                    <a class="view-btn" href="https://gwakyerim.github.io/renewal_amuse/" data-featherlight="iframe">사이트</a>
+                                    <a class="view-btn" href="https://gwakyerim.github.io/renewal_amuse/">사이트</a>
                                 </div>
                             </div>
                             <div class="img-prev">
@@ -220,13 +226,13 @@
                         </li>
                         <li class="list-item">
                             <div class="desc">
-                                <h1>포트폴리오 (반응형 웹)</h1>
+                                <h1>윤슬에게 (반응형 웹)</h1>
                                 <p>
-                                    웹 사이트 디자인부터 구축까지 손수 하드코딩하여 만든 반응형 사이트 입니다.
+                                    웹 사이트 기획부터 디자인,구축까지 손수 하드코딩하여 만든 반응형 사이트 입니다.(SCSS 사용)
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>작업 영억</span>
+                                        <span>작업 영역</span>
                                         메인페이지
                                     </li>
                                     <li>
@@ -235,7 +241,7 @@
                                     </li>
                                     <li>
                                         <span>제작 기간</span>
-                                        30일
+                                        5일
                                     </li>
                                     <li>
                                         <span>개인 참여도</span>
@@ -243,8 +249,8 @@
                                     </li>
                                 </ul>
                                 <div class="btn-wrap">
-                                    <a class="view-btn" href="https://www.figma.com/design/fLBOe3lShgMWHkPcPIfkHp/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0-1&t=Cnorv74536vMusA4-1" target="_blank">작업과정</a>
-                                    <a class="view-btn" href="https://gwakyerim.github.io/portfolio_yerim" data-featherlight="iframe">사이트</a>
+                                    <a class="view-btn" href="https://www.figma.com/design/CTQzrNY7bVEGnjV3UUEDpu/%EC%9C%A4%EC%8A%AC%EC%97%90%EA%B2%8C?node-id=0-1&t=pQqyZ8m1ZKG881nf-1" target="_blank">작업과정</a>
+                                    <a class="view-btn" href="https://gwakyerim.github.io/dearyunseul">사이트</a>
                                 </div>
                             </div>
                             <div class="img-prev">
@@ -259,7 +265,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>작업 영억</span>
+                                        <span>작업 영역</span>
                                         메인페이지
                                     </li>
                                     <li>
@@ -291,7 +297,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>작업 영억</span>
+                                        <span>작업 영역</span>
                                         메인페이지 (+ 전체메뉴)
                                     </li>
                                     <li>
@@ -323,7 +329,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>작업 영억</span>
+                                        <span>작업 영역</span>
                                         메인페이지 (+ 전체메뉴)
                                     </li>
                                     <li>
@@ -349,22 +355,22 @@
                         </li>
                         <li class="list-item">
                             <div class="desc">
-                                <h1>오늘의집 (모바일 웹)</h1>
+                                <h1>지그재그 (모바일 웹)</h1>
                                 <p>
-                                    평소 모바일 사이트에서 사용하며 느꼈던 불편한 점들을 찾아 리뉴얼하여 직접 만든 모바일 웹 페이지 입니다.
+                                    평소 이용하던 쇼핑몰 앱에서 불편한 점을 찾아 색상은 살리되 아이템들을 한 눈에 볼 수 있도록 배치하였습니다.
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>작업 영억</span>
-                                        메인페이지 (+ 전체메뉴)
+                                        <span>작업 영역</span>
+                                        프리로딩, 메인페이지, 로그인, 회원가입, 카테고리
                                     </li>
                                     <li>
                                         <span>사용 툴</span>
-                                        Figma, HTML5, CSS, VS Code, JQuery
+                                        Figma, HTML5, SCSS, VS Code, JavaScript
                                     </li>
                                     <li>
                                         <span>제작 기간</span>
-                                        13일
+                                        10일
                                     </li>
                                     <li>
                                         <span>개인 참여도</span>
@@ -373,7 +379,7 @@
                                 </ul>
                                 <div class="btn-wrap">
                                     <a class="view-btn" href="#">작업과정</a>
-                                    <a class="view-btn" href="#">사이트</a>
+                                    <a class="view-btn" href="https://gwakyerim.github.io/renewal-zigz/">사이트</a>
                                 </div>
                             </div>
                             <div class="img-prev slow">
@@ -387,7 +393,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <span>작업 영억</span>
+                                        <span>작업 영역</span>
                                         메인페이지 (+ 전체메뉴)
                                     </li>
                                     <li>
@@ -404,45 +410,13 @@
                                     </li>
                                 </ul>
                                 <div class="btn-wrap">
-                                    <a class="view-btn" href="#">작업과정</a>
-                                    <a class="view-btn" href="#">사이트</a>
+                                    <a class="view-btn" href="https://www.figma.com/design/Gvs1xaWwhH3AaxQW3k94p3/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC-%ED%8D%BC%EB%B8%94%EB%A6%AC%EC%8B%B1?node-id=0-1&t=zXacuO9nh0jfgFDB-1">작업과정</a>
+                                    <a class="view-btn" href="https://gwakyerim.github.io/kurly/">사이트</a>
                                 </div>
                             </div>
                             <div class="img-prev slow">
                             </div>
                         </li>
-                        <li class="list-item">
-                            <div class="desc">
-                                <h1>크롬</h1>
-                                <p>
-                                    혼자 하드코딩하여 제작 연습한 클론 메인 페이지 입니다.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span>작업 영억</span>
-                                        메인페이지 (+ 전체메뉴)
-                                    </li>
-                                    <li>
-                                        <span>사용 툴</span>
-                                        Figma, HTML5, CSS, VS Code, JQuery
-                                    </li>
-                                    <li>
-                                        <span>제작 기간</span>
-                                        2일
-                                    </li>
-                                    <li>
-                                        <span>개인 참여도</span>
-                                        100%
-                                    </li>
-                                </ul>
-                                <div class="btn-wrap">
-                                    <a class="view-btn" href="#">작업과정</a>
-                                    <a class="view-btn" href="#">사이트</a>
-                                </div>
-                            </div>
-                            <div class="img-prev">
-                            </div>
-                        </li> -->
                     </ul>
                 </div>
                 <!-- 포트폴리오 콘텐츠 : 디자인 영역 -->

@@ -1,5 +1,6 @@
 console.log('[common.js] loaded!');
 
+
 /* 모바일 네비 만들기 */
 // 1. 햄버거 메뉴를 클릭한다.
 const hamburgerMenu = document.querySelector('.mobile-nav');
@@ -23,7 +24,6 @@ for (var i = 0; i < menuList.length; i++) {
         break;
     }
 }
-
 
 /* Top Scroll 버튼 스크롤 효과 만들기 */
 // 1.윈도우 창 스크롤을 내린다.
@@ -55,7 +55,7 @@ function blink() {
 }
 setInterval(blink, 500) // blink 함수를 0.5초마다 실행 
 
-const string = "코딩과 함께 여행중인 퍼블리셔 예림 입니다."; // 텍스트를 string 변수에 담아준다.
+const string = "'안될 게 뭐 있어' 라는 긍정적인 마음으로 오늘도 열심히 일하고 있어요 !"; // 텍스트를 string 변수에 담아준다.
 const split = string.split(""); //string내에 텍스트를 여러개의 문자열로 나눈다.
 
 function dynamic(arr) {
@@ -78,9 +78,7 @@ function dynamic(arr){
         target.textContent = target.textContent + arr.shift();
         setTimeout(function(){
             dynamic(arr)}, 80)
-    } else {
-        setTimeout(reset, 3000);
-    }
+    } 
 }
 
 
@@ -126,176 +124,176 @@ window.addEventListener("scroll", function () {
 });
 
 /* 포트폴리오 배열로 담아 화면에 띄우기 */
-const siteNames = ['어뮤즈', '윤슬에게', '삼익가구', '동원제일저축은행', '영원무역', '지그재그', '마켓컬리', '크롬'];
-const ul = document.getElementById('tabContainer');
-siteNames.forEach(function(siteName, index) {
-    if (index === 0) {
-        ul.innerHTML = ul.innerHTML + '<li class="active"><button>' + siteName + '</button></li>';
-    } else {
-        ul.innerHTML = ul.innerHTML + '<li><button>' + siteName + '</button></li>';
-    }
-});
+// const siteNames = ['어뮤즈', '윤슬에게', '삼익가구', '동원제일저축은행', '영원무역', '지그재그', '마켓컬리', '크롬'];
+// const ul = document.getElementById('tabContainer');
+// siteNames.forEach(function(siteName, index) {
+//     if (index === 0) {
+//         ul.innerHTML = ul.innerHTML + '<li class="active"><button>' + siteName + '</button></li>';
+//     } else {
+//         ul.innerHTML = ul.innerHTML + '<li><button>' + siteName + '</button></li>';
+//     }
+// });
 
-const viewContainer = document.getElementById('viewContainer');
-const viewItems = [
-    {
-        title : "어뮤즈 (반응형 웹)",
-        desc : "기존사이트에 불편한 점을 찾아,사용자의 입장에서 시각적으로 알아보기 쉽고 사용이 편리하게 사이트를 리뉴얼 해보았습니다.",
-        area : "작업영역 : 메인페이지, 로그인, 메뉴리스트, 제품상세, FnQ 게시판",
-        tool : "사용 툴 : Figma, HTML5, CSS, Brackets, JQuery",
-        time : "제작 기간 : 10일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "https://www.figma.com/design/N58wN2i5CbuhA4Y5la4Yxy/AMUSE%EB%A6%AC%EB%89%B4%EC%96%BC?node-id=10-3&t=jLLDHvlV18QS5blm-1",
-        siteRoot : "https://gwakyerim.github.io/renewal_amuse/",
-    },
-    {
-        title : "윤슬에게 (반응형 웹)",
-        desc : "웹 사이트 기획부터 디자인,구축까지 손수 하드코딩하여 만든 반응형 사이트 입니다.(SCSS 사용)",
-        area : "작업영역 : 메인페이지",
-        tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JavaScript",
-        time : "제작 기간 : 5일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "https://www.figma.com/design/CTQzrNY7bVEGnjV3UUEDpu/%EC%9C%A4%EC%8A%AC%EC%97%90%EA%B2%8C?node-id=0-1&t=pQqyZ8m1ZKG881nf-1",
-        siteRoot : "https://gwakyerim.github.io/dearyunseul",
-    },
-    {
-        title : "삼익가구",
-        desc : "가구 브랜드에 맞게 자연 친화적인 색상을 바탕으로 하여 가구가 주는 모던함을 살려 홈페이지를 리뉴얼 하였습니다.",
-        area : "작업영역 : 메인페이지",
-        tool : "사용 툴 : Figma, HTML5, CSS, JavaScript",
-        time : "제작 기간 : 5일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "https://www.figma.com/design/fLBOe3lShgMWHkPcPIfkHp/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0-1&t=Cnorv74536vMusA4-1",
-        siteRoot : "https://gwakyerim.github.io/renewal_samick/",
-    },
-    {
-        title : "동원제일저축은행",
-        desc : "기존 사이트의 대표 컬러는 유지하며,사용자의 접근성을 고려한 레이아웃 재배치를 하여 리뉴얼 제작하였습니다.",
-        area : "작업영역 : 메인페이지 (+ 전체메뉴)",
-        tool : "사용 툴 : Figma, HTML5, CSS, VsCode, JQuery",
-        time : "제작 기간 : 5일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "https://www.figma.com/design/t6Vrx1WnhiIQnrwJBtTSTV/DW%EB%8F%99%EC%9B%90%EC%A0%80%EC%B6%95%EC%9D%80%ED%96%89?node-id=0-1&t=t10Vn9W1Encf0oMt-1",
-        siteRoot : "https://gwakyerim.github.io/renewal_dongwonbank/",
-    },
-    {
-        title : "영원무역 (반응형 웹)",
-        desc : "기존 사이트의 대표 컬러는 유지하며, 사용자의 접근성을 고려한 레이아웃 재배치를 하여 리뉴얼 제작하였습니다.",
-        area : "작업영역 : 메인페이지 (+ 전체메뉴)",
-        tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JavaScript, JQuery",
-        time : "제작 기간 : 10일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "https://www.figma.com/design/9u0ekqlqM4RI1tkIWmeXAU/%EC%98%81%EC%9B%90%EB%AC%B4%EC%97%AD-%EB%B0%98%EC%9D%91%ED%98%95?node-id=0-1&t=qV3HQbpjAx0cMzTO-1",
-        siteRoot : "https://gwakyerim.github.io/renewal-youngwon/",
-    },
-    {
-        title : "지그재그 (모바일 웹)",
-        desc : "평소 모바일 사이트에서 사용하며 느꼈던 불편한 점들을 찾아 리뉴얼하여 직접 만든 모바일 웹 페이지 입니다.",
-        area : "작업영역 : 프리로딩, 메인페이지, 로그인, 회원가입, 카테고리",
-        tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JavaScript",
-        time : "제작 기간 : 10일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "",
-        siteRoot : "https://gwakyerim.github.io/renewal-zigz/",
-    },
-    {
-        title : "마켓컬리 (모바일 웹)",
-        desc : "평소 모바일 사이트에서 사용하며 느꼈던 불편한 점들을 찾아 리뉴얼하여 직접 만든 모바일 웹 페이지 입니다.",
-        area : "작업영역 : 메인페이지, 로그인, 회원가입, 제품 상세, 카테고리, 검색 페이지, 마이 페이지,장바구니",
-        tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JQuery",
-        time : "제작 기간 : 28일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "https://www.figma.com/design/Gvs1xaWwhH3AaxQW3k94p3/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC-%ED%8D%BC%EB%B8%94%EB%A6%AC%EC%8B%B1?node-id=0-1&t=zXacuO9nh0jfgFDB-1",
-        siteRoot : "https://gwakyerim.github.io/kurly/",
-    },
-    {
-        title : "크롬 (클론 코딩)",
-        desc : "크롬 홈페이지를 보며 하드코딩한 반응형 클롭 웹 사이트 입니다.",
-        area : "작업영역 : 메인페이지",
-        tool : "사용 툴 : Figma, HTML5, CSS, VS Code, JQuery",
-        time : "제작 기간 : 1일",
-        part : "개인 참여도 : 100%",
-        procedureBtn : "작업과정",
-        siteBtn : "사이트",
-        procedureRoot : "",
-        siteRoot : "https://gwakyerim.github.io/demo_chrome/",
-    },
-]
-viewItems.forEach(function(viewItem, index) {
-    if (index === 0) {
-        viewContainer.innerHTML = viewContainer.innerHTML + `<li class="list-item active">
-                            <div class="desc">
-                                <h1>${viewItem.title}</h1>
-                                <p>
-                                    ${viewItem.desc}
-                                </p>
-                                <ul>
-                                    <li>
-                                        ${viewItem.area}
-                                    </li>
-                                    <li>
-                                        ${viewItem.tool}
-                                    </li>
-                                    <li>
-                                        ${viewItem.time}
-                                    </li>
-                                    <li>
-                                        ${viewItem.part}
-                                    </li>
-                                </ul>
-                                <div class="btn-wrap">
-                                    <a class="view-btn" target="_blank" href=${viewItem.procedureRoot}>${viewItem.procedureBtn}</a>
-                                    <a class="view-btn" target="_blank" href=${viewItem.siteRoot}>${viewItem.siteBtn}</a>
-                                </div>
-                            </div>
-                            <div class="img-prev">
-                            </div>
-                        </li>`
-    } else {
-        viewContainer.innerHTML = viewContainer.innerHTML + `<li class="list-item">
-                            <div class="desc">
-                                <h1>${viewItem.title}</h1>
-                                <p>
-                                    ${viewItem.desc}
-                                </p>
-                                <ul>
-                                    <li>
-                                        ${viewItem.area}
-                                    </li>
-                                    <li>
-                                        ${viewItem.tool}
-                                    </li>
-                                    <li>
-                                        ${viewItem.time}
-                                    </li>
-                                    <li>
-                                        ${viewItem.part}
-                                    </li>
-                                </ul>
-                                <div class="btn-wrap">
-                                    <a class="view-btn" target="_blank" href=${viewItem.procedureRoot}>${viewItem.procedureBtn}</a>
-                                    <a class="view-btn" target="_blank" href=${viewItem.siteRoot}>${viewItem.siteBtn}</a>
-                                </div>
-                            </div>
-                            <div class="img-prev">
-                            </div>
-                        </li>`
-    }
-})
+// const viewContainer = document.getElementById('viewContainer');
+// const viewItems = [
+//     {
+//         title : "어뮤즈 (반응형 웹)",
+//         desc : "기존사이트에 불편한 점을 찾아,사용자의 입장에서 시각적으로 알아보기 쉽고 사용이 편리하게 사이트를 리뉴얼 해보았습니다.",
+//         area : "작업영역 : 메인페이지, 로그인, 메뉴리스트, 제품상세, FnQ 게시판",
+//         tool : "사용 툴 : Figma, HTML5, CSS, Brackets, JQuery",
+//         time : "제작 기간 : 10일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "https://www.figma.com/design/N58wN2i5CbuhA4Y5la4Yxy/AMUSE%EB%A6%AC%EB%89%B4%EC%96%BC?node-id=10-3&t=jLLDHvlV18QS5blm-1",
+//         siteRoot : "https://gwakyerim.github.io/renewal_amuse/",
+//     },
+//     {
+//         title : "윤슬에게 (반응형 웹)",
+//         desc : "웹 사이트 기획부터 디자인,구축까지 손수 하드코딩하여 만든 반응형 사이트 입니다.(SCSS 사용)",
+//         area : "작업영역 : 메인페이지",
+//         tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JavaScript",
+//         time : "제작 기간 : 5일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "https://www.figma.com/design/CTQzrNY7bVEGnjV3UUEDpu/%EC%9C%A4%EC%8A%AC%EC%97%90%EA%B2%8C?node-id=0-1&t=pQqyZ8m1ZKG881nf-1",
+//         siteRoot : "https://gwakyerim.github.io/dearyunseul",
+//     },
+//     {
+//         title : "삼익가구",
+//         desc : "가구 브랜드에 맞게 자연 친화적인 색상을 바탕으로 하여 가구가 주는 모던함을 살려 홈페이지를 리뉴얼 하였습니다.",
+//         area : "작업영역 : 메인페이지",
+//         tool : "사용 툴 : Figma, HTML5, CSS, JavaScript",
+//         time : "제작 기간 : 5일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "https://www.figma.com/design/fLBOe3lShgMWHkPcPIfkHp/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0-1&t=Cnorv74536vMusA4-1",
+//         siteRoot : "https://gwakyerim.github.io/renewal_samick/",
+//     },
+//     {
+//         title : "동원제일저축은행",
+//         desc : "기존 사이트의 대표 컬러는 유지하며,사용자의 접근성을 고려한 레이아웃 재배치를 하여 리뉴얼 제작하였습니다.",
+//         area : "작업영역 : 메인페이지 (+ 전체메뉴)",
+//         tool : "사용 툴 : Figma, HTML5, CSS, VsCode, JQuery",
+//         time : "제작 기간 : 5일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "https://www.figma.com/design/t6Vrx1WnhiIQnrwJBtTSTV/DW%EB%8F%99%EC%9B%90%EC%A0%80%EC%B6%95%EC%9D%80%ED%96%89?node-id=0-1&t=t10Vn9W1Encf0oMt-1",
+//         siteRoot : "https://gwakyerim.github.io/renewal_dongwonbank/",
+//     },
+//     {
+//         title : "영원무역 (반응형 웹)",
+//         desc : "기존 사이트의 대표 컬러는 유지하며, 사용자의 접근성을 고려한 레이아웃 재배치를 하여 리뉴얼 제작하였습니다.",
+//         area : "작업영역 : 메인페이지 (+ 전체메뉴)",
+//         tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JavaScript, JQuery",
+//         time : "제작 기간 : 10일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "https://www.figma.com/design/9u0ekqlqM4RI1tkIWmeXAU/%EC%98%81%EC%9B%90%EB%AC%B4%EC%97%AD-%EB%B0%98%EC%9D%91%ED%98%95?node-id=0-1&t=qV3HQbpjAx0cMzTO-1",
+//         siteRoot : "https://gwakyerim.github.io/renewal-youngwon/",
+//     },
+//     {
+//         title : "지그재그 (모바일 웹)",
+//         desc : "평소 모바일 사이트에서 사용하며 느꼈던 불편한 점들을 찾아 리뉴얼하여 직접 만든 모바일 웹 페이지 입니다.",
+//         area : "작업영역 : 프리로딩, 메인페이지, 로그인, 회원가입, 카테고리",
+//         tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JavaScript",
+//         time : "제작 기간 : 10일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "",
+//         siteRoot : "https://gwakyerim.github.io/renewal-zigz/",
+//     },
+//     {
+//         title : "마켓컬리 (모바일 웹)",
+//         desc : "평소 모바일 사이트에서 사용하며 느꼈던 불편한 점들을 찾아 리뉴얼하여 직접 만든 모바일 웹 페이지 입니다.",
+//         area : "작업영역 : 메인페이지, 로그인, 회원가입, 제품 상세, 카테고리, 검색 페이지, 마이 페이지,장바구니",
+//         tool : "사용 툴 : Figma, HTML5, SCSS, VS Code, JQuery",
+//         time : "제작 기간 : 28일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "https://www.figma.com/design/Gvs1xaWwhH3AaxQW3k94p3/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC-%ED%8D%BC%EB%B8%94%EB%A6%AC%EC%8B%B1?node-id=0-1&t=zXacuO9nh0jfgFDB-1",
+//         siteRoot : "https://gwakyerim.github.io/kurly/",
+//     },
+//     {
+//         title : "크롬 (클론 코딩)",
+//         desc : "크롬 홈페이지를 보며 하드코딩한 반응형 클롭 웹 사이트 입니다.",
+//         area : "작업영역 : 메인페이지",
+//         tool : "사용 툴 : Figma, HTML5, CSS, VS Code, JQuery",
+//         time : "제작 기간 : 1일",
+//         part : "개인 참여도 : 100%",
+//         procedureBtn : "작업과정",
+//         siteBtn : "사이트",
+//         procedureRoot : "",
+//         siteRoot : "https://gwakyerim.github.io/demo_chrome/",
+//     },
+// ]
+// viewItems.forEach(function(viewItem, index) {
+//     if (index === 0) {
+//         viewContainer.innerHTML = viewContainer.innerHTML + `<li class="list-item active">
+//                             <div class="desc">
+//                                 <h1>${viewItem.title}</h1>
+//                                 <p>
+//                                     ${viewItem.desc}
+//                                 </p>
+//                                 <ul>
+//                                     <li>
+//                                         ${viewItem.area}
+//                                     </li>
+//                                     <li>
+//                                         ${viewItem.tool}
+//                                     </li>
+//                                     <li>
+//                                         ${viewItem.time}
+//                                     </li>
+//                                     <li>
+//                                         ${viewItem.part}
+//                                     </li>
+//                                 </ul>
+//                                 <div class="btn-wrap">
+//                                     <a class="view-btn" target="_blank" href=${viewItem.procedureRoot}>${viewItem.procedureBtn}</a>
+//                                     <a class="view-btn" target="_blank" href=${viewItem.siteRoot}>${viewItem.siteBtn}</a>
+//                                 </div>
+//                             </div>
+//                             <div class="img-prev">
+//                             </div>
+//                         </li>`
+//     } else {
+//         viewContainer.innerHTML = viewContainer.innerHTML + `<li class="list-item">
+//                             <div class="desc">
+//                                 <h1>${viewItem.title}</h1>
+//                                 <p>
+//                                     ${viewItem.desc}
+//                                 </p>
+//                                 <ul>
+//                                     <li>
+//                                         ${viewItem.area}
+//                                     </li>
+//                                     <li>
+//                                         ${viewItem.tool}
+//                                     </li>
+//                                     <li>
+//                                         ${viewItem.time}
+//                                     </li>
+//                                     <li>
+//                                         ${viewItem.part}
+//                                     </li>
+//                                 </ul>
+//                                 <div class="btn-wrap">
+//                                     <a class="view-btn" target="_blank" href=${viewItem.procedureRoot}>${viewItem.procedureBtn}</a>
+//                                     <a class="view-btn" target="_blank" href=${viewItem.siteRoot}>${viewItem.siteBtn}</a>
+//                                 </div>
+//                             </div>
+//                             <div class="img-prev">
+//                             </div>
+//                         </li>`
+//     }
+// })
 
 const tabList = document.querySelectorAll('.content-site .tab li');
 const siteList = document.querySelectorAll('.content-site .view .list-item');
@@ -357,3 +355,4 @@ designList.forEach(function(banner){
 document.querySelector('.content-design .modal').addEventListener('click', function() {
     this.classList.remove('on');
 })
+
