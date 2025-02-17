@@ -631,11 +631,6 @@ section {
        .text-wrap {
             width: 70%;
             text-align: center;
-            transform: rotateY(-180deg);
-            transition: 0.5s;
-            &.active {
-                transform: rotateY(0);
-            }
             p {
                 font-size: 36px;
                 white-space: pre-line;

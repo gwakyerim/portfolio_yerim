@@ -90,8 +90,6 @@ window.addEventListener("scroll", function () {
 
     if (aboutScroll.top < window.innerHeight && aboutScroll.bottom >= 0) {
         about.classList.add('active');
-    } else {
-        about.classList.remove('active');
     }
 });
 
@@ -104,23 +102,8 @@ window.addEventListener("scroll", function () {
 
         if (position.top < window.innerHeight && position.bottom >= 0) {
             skillDesc.classList.add('active');
-        } else {
-            skillDesc.classList.remove('active');
         }
     })
-});
-
-/* Contact 영역 스크롤 이벤트 */
-const contactTxt = document.querySelector('#contact .text-wrap');
-
-window.addEventListener("scroll", function () {
-    const position = contactTxt.getBoundingClientRect();
-
-    if (position.top < window.innerHeight >= 0) {
-        contactTxt.classList.add('active');
-    } else {
-        contactTxt.classList.remove('active');
-    }
 });
 
 /* 포트폴리오 배열로 담아 화면에 띄우기 */
@@ -295,6 +278,8 @@ window.addEventListener("scroll", function () {
 //     }
 // })
 
+
+/* 포트폴리오 탭메뉴 구현하기 */
 const tabList = document.querySelectorAll('.content-site .tab li');
 const siteList = document.querySelectorAll('.content-site .view .list-item');
 //1.tab > li 의 인덱스 번호를 찾는다.

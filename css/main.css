@@ -623,11 +623,6 @@ section {
 #contact .container .contact-inner .text-wrap {
   width: 70%;
   text-align: center;
-  transform: rotateY(-180deg);
-  transition: 0.5s;
-}
-#contact .container .contact-inner .text-wrap.active {
-  transform: rotateY(0);
 }
 #contact .container .contact-inner .text-wrap p {
   font-size: 36px;
