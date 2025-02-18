@@ -9,6 +9,7 @@
   font-style: normal;
 }
 /* FontAwesome CDN 4.7 */
+/* variables */
 :root {
   --dark-gray: #252525;
   --green: #0d5d6d;
@@ -18,6 +19,7 @@
   --yellow: #fff0c6;
 }
 
+/* common style */
 html {
   scroll-behavior: smooth;
 }
@@ -371,6 +373,11 @@ section {
 /* #### Portfolio 영역 #### */
 #portfolio {
   background-color: var(--beige);
+  /* 디자인 상세 영역 */
+}
+#portfolio .content-site {
+  /* 탭 메뉴 영역 */
+  /* 탭메뉴 상세 영역 */
 }
 #portfolio .content-site .tab {
   text-align: center;

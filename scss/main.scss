@@ -9,7 +9,7 @@
 /* FontAwesome CDN 4.7 */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
-// variables
+/* variables */
 :root {
     --dark-gray: #252525;
     --green: #0d5d6d;
@@ -19,7 +19,7 @@
     --yellow: #fff0c6;
 }
 
-// common style
+/* common style */
 html {
     scroll-behavior: smooth;
 }
@@ -88,6 +88,7 @@ section {
     transform: rotate(-45deg);
 }
 /* 햄버거 메뉴 애니메이션 끝 */
+
 
 /*  header 영역 */
 #header {
@@ -361,10 +362,12 @@ section {
         }
     }
 }
+
 /* #### Portfolio 영역 #### */
 #portfolio {
     background-color: var(--beige);
     .content-site {
+        /* 탭 메뉴 영역 */
         .tab {
             text-align: center;
             margin-bottom: 40px;
@@ -412,6 +415,7 @@ section {
                 }
             }
         }
+        /* 탭메뉴 상세 영역 */
         .view {
             border: 1px solid var(--light-gray);
             border-radius: 20px;
@@ -545,6 +549,7 @@ section {
             }
         }
     }
+    /* 디자인 상세 영역 */
     .content-design {
         h3 {
             font-size: 36px;
@@ -660,6 +665,7 @@ section {
         }
     }
 }
+
 /* #### footer 영역 #### */
 footer {
     background-color: var(--green);
@@ -673,6 +679,7 @@ footer {
         text-align: center;
     }
 }
+
 /* #### gotop 버튼 영역 #### */
 .go-top {
     position: fixed;
