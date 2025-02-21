@@ -1,5 +1,14 @@
 console.log('[common.js] loaded!');
 
+/* 모바일 100vh 속성 스크롤 문제 해결 */
+function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+  
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  
+setScreenSize();
+
 
 /* 모바일 네비 만들기 */
 // 1. 햄버거 메뉴를 클릭한다.

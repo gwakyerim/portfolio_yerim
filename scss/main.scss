@@ -411,6 +411,7 @@ section {
                     background-color: transparent;
                     font-size: 20px;
                     width: 100%;
+                    color: var(--dark-gray);
                     cursor: pointer;
                 }
             }
@@ -752,6 +753,7 @@ footer {
     }
     /* #### Home 영역 #### */
     #home {
+        height: calc(var(--vh, 1vh) * 100);
         .scroll-down {
             font-size: 14px;
             span {
@@ -906,6 +908,7 @@ footer {
     }
     /* #### Home 영역 ####*/
     #home {
+        height: calc(var(--vh, 1vh) * 100);
         .home-title {
             padding: 0 16px;
             text-align: center;

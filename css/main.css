@@ -424,6 +424,7 @@ section {
   background-color: transparent;
   font-size: 20px;
   width: 100%;
+  color: var(--dark-gray);
   cursor: pointer;
 }
 #portfolio .content-site .view {
@@ -740,6 +741,9 @@ footer .container {
     position: relative;
   }
   /* #### Home 영역 #### */
+  #home {
+    height: calc(var(--vh, 1vh) * 100);
+  }
   #home .scroll-down {
     font-size: 14px;
   }
@@ -875,6 +879,9 @@ footer .container {
     position: relative;
   }
   /* #### Home 영역 ####*/
+  #home {
+    height: calc(var(--vh, 1vh) * 100);
+  }
   #home .home-title {
     padding: 0 16px;
     text-align: center;
